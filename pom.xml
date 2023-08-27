@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.hf.cloud</groupId>
+        <artifactId>hf-cloud-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
+    <modules>
+        <module>web</module>
+        <module>facade</module>
+        <module>integration</module>
+        <module>service</module>
+        <module>dao</module>
+        <module>common</module>
+        <module>manager</module>
+        <module>facade/implement</module>
+        <module>facade/api</module>
+        <module>test</module>
+    </modules>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hf</groupId>
+    <artifactId>hf-cloud-archetype</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.name>${project.artifactId}</project.name>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.hf.biz</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz</groupId>
+                <artifactId>dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz</groupId>
+                <artifactId>service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz</groupId>
+                <artifactId>integration</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz</groupId>
+                <artifactId>facade</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz.facade</groupId>
+                <artifactId>implement</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz.facade</groupId>
+                <artifactId>api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hf.biz</groupId>
+                <artifactId>manager</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
