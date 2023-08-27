@@ -1,6 +1,6 @@
 package com.hf.biz.web.controller;
 
-import com.hf.common.entity.ResponseData;
+import com.hf.tools.common.entity.ResponseData;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
