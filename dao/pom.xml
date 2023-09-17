@@ -54,6 +54,11 @@
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.hf.tools.starter</groupId>
+            <artifactId>tools-starter-jpa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

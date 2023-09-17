@@ -4,13 +4,11 @@ server:
 spring:
   application:
     name: ${project.artifactId}
+  profiles:
+    active: ${RUN_TIME:dev}
   cache:
     type: redis
   redis:
-    port: ${REDIS_PORT:6379}
-    host: ${REDIS_HOST:192.168.1.108}
-    password: ${REDIS_PASSWORD:123456}
-    database: ${REDIS_DATABASE:0}
     lettuce:
       pool:
         max-idle: 10
@@ -23,10 +21,6 @@ spring:
     default-property-inclusion: non_null
   datasource:
     druid:
-      url: ${MYSQL_URL:jdbc:mysql://127.0.0.1:3306/cloud?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&amp&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai}
-      username: ${MYSQL_USER_NAME:root}
-      password: ${MYSQL_PASSWORD:123456}
-      driver-class-name: com.mysql.cj.jdbc.Driver
       keep-alive: true
       async-init: true
       min-evictable-idle-time-millis: 600000
@@ -44,13 +38,11 @@ spring:
       # 必须大于 time-between-eviction-runs-millis 时间
       keep-alive-between-time-millis: 450000
   jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-    properties:
-      hibernate:
-        use_sql_comments: true
-        format_sql: true
+    database: mysql
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
 
 logging:
   file:
